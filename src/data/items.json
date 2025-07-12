@@ -1,0 +1,30 @@
+
+
+
+
+[
+  {
+    "id": 1,
+    "name": "Game Box",
+    "price": 59.99,
+    "imgUrl": "https://i.ibb.co/MnzJm8X/4850889-1.png"
+  },
+  {
+    "id": 2,
+    "name": "Headphone",
+    "price": 89.99,
+    "imgUrl": "https://i.ibb.co/qNcwY4T/device-electronicv2-5-1.png"
+  },
+  {
+    "id": 3,
+    "name": "3D Glass",
+    "price": 25.50,
+    "imgUrl": "https://i.ibb.co/gZ7jCLb/image-342.png"
+  },
+  {
+    "id": 4,
+    "name": "SoundBox",
+    "price": 149.00,
+    "imgUrl": "https://i.ibb.co/Vp25GQjh/soundBox.jpg"
+  }
+]
