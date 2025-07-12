@@ -64,6 +64,7 @@ const CartItems = ({ id, quantity }: CartItemProps) => {
         size="sm"
         onClick={() => removeFromCart(id)}
       >&times;</Button>
+      
     </Stack>
   );
 };
