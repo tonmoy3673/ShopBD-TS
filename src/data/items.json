@@ -6,13 +6,13 @@
   {
     "id": 1,
     "name": "Game Box",
-    "price": 59.99,
+    "price": 10.99,
     "imgUrl": "https://i.ibb.co/MnzJm8X/4850889-1.png"
   },
   {
     "id": 2,
     "name": "Headphone",
-    "price": 89.99,
+    "price": 7.99,
     "imgUrl": "https://i.ibb.co/qNcwY4T/device-electronicv2-5-1.png"
   },
   {
