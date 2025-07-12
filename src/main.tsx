@@ -16,7 +16,7 @@ if (root) {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<RootLayout/>}>
-        <Route path="/home" index element={<Home />} />
+        <Route path="/" index element={<Home />} />
         <Route path="/about" element={<About/>}/>
         <Route path="/store" element={<Store/>}/>
         </Route>
