@@ -1,16 +1,19 @@
 import { Button, Card, CardBody, CardImg } from "react-bootstrap";
 import FormatCurrency from "../utilities/FormatCurrency";
+import { useShoppingCart } from "../context/ShoppingCartContext";
 
 interface ItemData {
-  id?: number;
+  id: number;
   name: string;
   price: number;
   imgUrl: string;
 }
 const Items = (item: ItemData) => {
-  const { name, price, imgUrl } = item;
+  const {id, name, price, imgUrl } = item;
 
-  const quantity: number = 1;
+  const {getItemQuantity,deCreaseCartQuantity,removeFromCart,inCreaseCartQuantity}= useShoppingCart();
+
+  const quantity: number = getItemQuantity(id);
 
   return (
     <Card className="h-100">
@@ -43,15 +46,15 @@ const Items = (item: ItemData) => {
                 style={{ gap: "0.5rem" }}
               >
                 {/* =============== Increase Button ============ */}
-                <Button>+</Button>
+                <Button onClick={()=>inCreaseCartQuantity(id)}>+</Button>
                 <div>
                     <span className="fs-5">{quantity}</span> in Cart
                 </div>
 
                 {/* ================= Decrease Button =========== */}
-                <Button>-</Button>
+                <Button onClick={()=>deCreaseCartQuantity(id)}>-</Button>
               </div>
-              <Button variant="danger" size="sm" className="mt-1">Remove</Button>
+              <Button onClick={()=>removeFromCart(id)} variant="danger" size="sm" className="mt-1">Remove</Button>
             </div>
           )}
         </div>

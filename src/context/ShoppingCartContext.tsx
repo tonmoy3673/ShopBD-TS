@@ -14,10 +14,15 @@ type ShoppingCartContext = {
   deCreaseCartQuantity: (id: number) => void;
   removeFromCart: (id: number) => void;
 };
-const ShoppingCartContext = createContext({} as ShoppingCartContext);
+const ShoppingCartContext = createContext<ShoppingCartContext | undefined>(undefined);
+
 
 export const useShoppingCart = () => {
-  return useContext(ShoppingCartContext);
+  const context = useContext(ShoppingCartContext);
+  if (!context) {
+    throw new Error("useShoppingCart must be used within a ShoppingCartProvider");
+  }
+  return context;
 };
 
 export const ShoppingCartProvider = ({ children }: ShoppingCartProps) => {
