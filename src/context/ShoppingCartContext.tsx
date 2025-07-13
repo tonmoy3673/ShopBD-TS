@@ -34,7 +34,7 @@ export const useShoppingCart = () => {
 };
 
 export const ShoppingCartProvider = ({ children }: ShoppingCartProps) => {
-  const [cartItems, setCartItems] = useState<CartItemsData[]>([]);
+  const [cartItems, setCartItems] = useLocalStorage<CartItemsData[]>("shopping-cart",[]);
 
   // =============== Cart Quantity =============//
 
