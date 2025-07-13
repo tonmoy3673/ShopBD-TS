@@ -35,20 +35,22 @@ export const useShoppingCart = () => {
 };
 
 export const ShoppingCartProvider = ({ children }: ShoppingCartProps) => {
-  const [cartItems, setCartItems] = useLocalStorage<CartItemsData[]>("shopping-cart",[]);
+  const [cartItems, setCartItems] = useLocalStorage<CartItemsData[]>(
+    "shopping-cart",
+    []
+  );
 
   // =============== Cart Quantity =============//
-
   const cartQuantity = cartItems.reduce(
     (total, item) => total + item.quantity,
     0
   );
 
   // ================= Open and Close Cart ============//
-  const [isOpen,setIsOpen]= useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
-  const openCart =()=>setIsOpen(true);
-  const closeCart =()=> setIsOpen(false);
+  const openCart = () => setIsOpen(true);
+  const closeCart = () => setIsOpen(false);
 
   // ============ getItemQuantity ============//
   const getItemQuantity = (id: number) => {
@@ -70,7 +72,6 @@ export const ShoppingCartProvider = ({ children }: ShoppingCartProps) => {
   };
 
   //   ============== deCrease Item =============//
-
   const deCreaseCartQuantity = (id: number) => {
     setCartItems((currItem) => {
       const foundItem = currItem.find((item) => item.id === id);
@@ -103,11 +104,11 @@ export const ShoppingCartProvider = ({ children }: ShoppingCartProps) => {
         cartQuantity,
         cartItems,
         openCart,
-        closeCart
+        closeCart,
       }}
     >
       {children}
-      <ShoppingCart isOpen={isOpen}/>
+      <ShoppingCart isOpen={isOpen} />
     </ShoppingCartContext.Provider>
   );
 };

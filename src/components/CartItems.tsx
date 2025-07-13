@@ -59,12 +59,9 @@ const CartItems = ({ id, quantity }: CartItemProps) => {
         </div>
       </div>
       <div>{FormatCurrency(item.price * quantity)}</div>
-      <Button
-        variant="danger"
-        size="sm"
-        onClick={() => removeFromCart(id)}
-      >&times;</Button>
-      
+      <Button variant="danger" size="sm" onClick={() => removeFromCart(id)}>
+        &times;
+      </Button>
     </Stack>
   );
 };
