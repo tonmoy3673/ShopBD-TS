@@ -9,14 +9,9 @@ const Navbar = () => {
       <Container className="me-auto">
         <Nav style={{ fontSize: 18 }} className="fw-semibold">
           <Nav.Link to="/" as={NavLink}>
-            Home
+            ShopBD
           </Nav.Link>
-          <Nav.Link to="/about" as={NavLink}>
-            About
-          </Nav.Link>
-          <Nav.Link to="/store" as={NavLink}>
-            Store
-          </Nav.Link>
+         
         </Nav>
         {cartQuantity > 0 && (
           <Button

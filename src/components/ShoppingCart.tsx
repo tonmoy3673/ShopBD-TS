@@ -33,8 +33,7 @@ const ShoppingCart = ({ isOpen }: ShoppingCartProps) => {
           }
       </div>
         </Stack>
-      </Offcanvas.Body>
-    </Offcanvas>
+      </Offcanvas.Body>j    </Offcanvas>
   );
 };
 
