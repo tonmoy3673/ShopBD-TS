@@ -20,7 +20,7 @@ const ShoppingCart = ({ isOpen }: ShoppingCartProps) => {
             <CartItems key={item.id} {...item}/>
           ))}
 
-          {/* =============== Get Total ============ */}
+          
           {/* ============== Get Total ============ */}
       <div className="ms-auto fw-bold fs-6">
           Total : {
